@@ -1,0 +1,29 @@
+There are two methods by which we can organize the files
+
+
+Method I-
+
+By using command
+
+cmake -H. -B <subdirectoryname>
+ 
+-H.-->current directory
+-B→to build the sub directory in root folder
+
+
+
+
+Method II-
+
+By adding command in the CMakeLists.txt
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+Where binary file output is stored in an directory
+
+bash
+
+Vi CMakeLists.txt
+
+cmake_minimum_required(VERSION 3.9.1)
+project(hello)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/<subdirectoryname>)
+add_executable(executable main.c)
