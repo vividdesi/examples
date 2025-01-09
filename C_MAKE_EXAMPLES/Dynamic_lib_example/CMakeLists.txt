@@ -1,0 +1,5 @@
+make_minimum_required(VERSION 3.9.1)
+project(static_lib)
+add_library(calc SHARED calc.c)
+add_executable(executable main.c)
+target_link_libraries(executable calc)
